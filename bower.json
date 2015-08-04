@@ -1,0 +1,48 @@
+{
+  "name": "rally-jquery-tools",
+  "main": [
+    "dist/dateinput.min.js",
+    "dist/overlay.apple.min.js",
+    "dist/overlay.min.js",
+    "dist/rangeinput.min.js",
+    "dist/scrollable.autoscroll.min.js",
+    "dist/scrollable.min.js",
+    "dist/scrollable.navigator.min.js",
+    "dist/tabs.min.js",
+    "dist/tabs.slideshow.min.js",
+    "dist/toolbox.expose.min.js",
+    "dist/toolbox.flashembed.min.js",
+    "dist/toolbox.history.min.js",
+    "dist/toolbox.mousewheel.min.js",
+    "dist/tooltip.dynamic.min.js",
+    "dist/tooltip.min.js",
+    "dist/tooltip.slide.min.js",
+    "dist/validator.min.js"
+  ],
+  "version": "1.2.8",
+  "homepage": "https://github.com/AudaxHealthInc/jquerytools",
+  "authors": [
+    "Rally Health (http://www.rallyhealth.com)",
+    "jQuery Tools (http://jquerytools.github.io)"
+  ],
+  "description": "Modified version of Jquery Tools",
+  "keywords": [
+    "rally",
+    "jquery-tools",
+    "jquerytools"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "src",
+    "lib",
+    "README.md",
+    "CHANGELOG.md",
+    "Gruntfile.js",
+    "package.json"
+  ]
+}

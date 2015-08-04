@@ -7,7 +7,7 @@ jQuery Tools is a collection of the most important user-interface components for
 
 ##Contributing
 
-Please issue pull requests to the [master branch](https://github.com/jquerytools/jquerytools/tree/master).  
+Please issue pull requests to the [master branch](https://github.com/AudaxHealthInc/jquerytools/tree/master).  
 
 This is where active development takes place. We'll then make cuts from master when we choose to release a new version.
 
