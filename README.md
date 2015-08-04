@@ -1,3 +1,5 @@
+This fork originates from:
+
 [jQuery Tools](http://flowplayer.org/tools/) - The Missing UI library for the Web
 ================================
 
@@ -5,8 +7,7 @@ jQuery Tools is a collection of the most important user-interface components for
 
 ##Contributing
 
-Please issue pull requests to the [dev branch](https://github.com/jquerytools/jquerytools/tree/dev).  
+Please issue pull requests to the [master branch](https://github.com/jquerytools/jquerytools/tree/master).  
 
-This is where active development takes place, we then merge changes into master for releases. That will become v1.2.6. 
-Most of the development goes to 2.0 which is currently a private repository.
+This is where active development takes place. We'll then make cuts from master when we choose to release a new version.
 
