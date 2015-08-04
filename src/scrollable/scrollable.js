@@ -1,4 +1,7 @@
+
 /**
+ * Modified version of Jquery Scrollable with Sticky left and right DIV 
+ * Ideal for Leaderboards to display the current user stats 
  * @license 
  * jQuery Tools @VERSION Scrollable - New wave UI design
  * 
@@ -26,6 +29,7 @@
 			item: '> *',
 			items: '.items',
 			keyboard: true,
+			maxItemsInView: 4,
 			mousewheel: false,
 			next: '.next',   
 			prev: '.prev', 
@@ -105,11 +109,21 @@
 			},
 			
 			next: function(time) {
-				return self.move(conf.size, time);	
+				// stop moving the slides if you reach the end of the carousel
+				if (!conf.circular && ((conf.maxItemsInView+index)==self.getItems().size())) {
+					return ;
+				}
+				if (!itemWrap.is(":animated"))
+					return self.move(conf.size, time);	
 			},
 			
 			prev: function(time) {
-				return self.move(-conf.size, time);	
+				// stop moving the slides if you reach the beginning of the carousel
+				if (!conf.circular && (index==0)) {
+					return ;
+				} 
+				if (!itemWrap.is(":animated"))
+					return self.move(-conf.size, time);	
 			},
 			
 			begin: function(time) {
@@ -254,17 +268,17 @@
 			}
 
 		}
-		
+
 		// next/prev buttons
-		var prev = find(root, conf.prev).click(function(e) { e.stopPropagation(); self.prev(); }),
-			 next = find(root, conf.next).click(function(e) { e.stopPropagation(); self.next(); }); 
+		var prev = find(root, conf.prev).click(function(e) { e.stopPropagation(); self.prev(); });
+		var next = find(root, conf.next).click(function(e) { e.stopPropagation(); self.next(); });
 		
 		if (!conf.circular) {
 			self.onBeforeSeek(function(e, i) {
 				setTimeout(function() {
 					if (!e.isDefaultPrevented()) {
 						prev.toggleClass(conf.disabledClass, i <= 0);
-						next.toggleClass(conf.disabledClass, i >= self.getSize() -1);
+						next.toggleClass(conf.disabledClass, (i+conf.maxItemsInView) >= self.getSize());
 					}
 				}, 1);
 			});
