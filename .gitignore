@@ -17,3 +17,6 @@ jquerytools.github.com
 
 # MacOS directory store
 .DS_Store
+
+# Node modules
+node_modules
