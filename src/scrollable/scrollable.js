@@ -85,7 +85,7 @@
 			}, 
 
 			getSize: function() {
-				return self.getItems().size();	
+				return self.getItems().length;	
 			},
 
 			getNaviButtons: function() {
@@ -110,7 +110,7 @@
 			
 			next: function(time) {
 				// stop moving the slides if you reach the end of the carousel
-				if (!conf.circular && ((conf.maxItemsInView+index)==self.getItems().size())) {
+				if (!conf.circular && ((conf.maxItemsInView+index)==self.getItems().length)) {
 					return ;
 				}
 				if (!itemWrap.is(":animated"))

@@ -20,3 +20,5 @@ jquerytools.github.com
 
 # Node modules
 node_modules
+
+.idea/*
